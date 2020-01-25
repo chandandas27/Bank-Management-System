@@ -16,10 +16,12 @@ Customer can even use different services like insurance, loan, bill payments etc
 
 
 
+
 Modules:
 
 
 Bank Management Mini DBMS Project contains 4 modules:
+
 
 
 1.	Account Holder: As the name suggests, a record of customer details.
@@ -32,7 +34,9 @@ Bank Management Mini DBMS Project contains 4 modules:
 
 
 
+
 SOFTWARE REQUIREMENTS:
+
 
 
 •	Operating system 		: 	Windows XP/7/10.
@@ -47,7 +51,9 @@ SOFTWARE REQUIREMENTS:
 
 
 
+
 Technologies used:
+
 
 
 •	JavaFX
