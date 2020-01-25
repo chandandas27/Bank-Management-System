@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="branchEmpAnchor" prefHeight="579.0" prefWidth="709.0" style="-fx-background-color: #555555;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.BranchEmployeeSceneController">
+   <children>
+      <SplitPane dividerPositions="0.4214992927864215" style="-fx-background-color: #555555;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="577.0" prefWidth="390.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <GridPane prefHeight="400.0" prefWidth="295.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="130.0" prefWidth="333.0" style="-fx-background-color: #ff4565;" text="Branch Regestration" textFill="WHITE" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="48.0" prefWidth="333.0" style="-fx-background-color: #ff4565;" text="Employee Regestration" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Branch Name :" textFill="WHITE" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Branch Location :" textFill="WHITE" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Name" textFill="WHITE" GridPane.rowIndex="7" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Branch" textFill="WHITE" GridPane.rowIndex="8" />
+                        <Label alignment="CENTER_RIGHT" prefHeight="88.0" prefWidth="205.0" text="Branch Code :" textFill="WHITE" GridPane.rowIndex="2" />
+                        <TextField fx:id="bCode" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="bName" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="bLoc" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="eName" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Button mnemonicParsing="false" onAction="#addBranch" prefHeight="25.0" prefWidth="159.0" text="Add Branch" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Button mnemonicParsing="false" onAction="#addEmployee" prefHeight="28.0" prefWidth="145.0" text="Add Employee" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ComboBox fx:id="cBranch" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Label fx:id="warnMsg" alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="354.0" textFill="WHITE" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <SplitPane dividerPositions="0.28391959798994976" orientation="VERTICAL" style="-fx-background-color: #555555;">
+               <items>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="120.0" prefWidth="333.0" style="-fx-background-color: #ff4565;" text="Search Employee" textFill="WHITE" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="eSName" promptText="Employee Name" GridPane.rowIndex="2" />
+                        <Button mnemonicParsing="false" onAction="#searchEmployee" prefHeight="25.0" prefWidth="167.0" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="eTableView" prefHeight="200.0" prefWidth="200.0" />
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

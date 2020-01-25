@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootLayout" prefHeight="562.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.BankMainController">
+   <center>
+      <AnchorPane fx:id="mainAnchor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <GridPane prefHeight="335.0" prefWidth="122.0" style="-fx-background-color: #ff4565;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.666656494140625" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.33331298828125" minHeight="1.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="121.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ToggleButton fx:id="acntHoldSceneBtn" mnemonicParsing="false" onAction="#setAcntHoldScene" prefHeight="32.0" prefWidth="126.0" stylesheets="@style.css" text="Account Holders" GridPane.rowIndex="3">
+               <toggleGroup>
+                  <ToggleGroup fx:id="group1" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="brchEmpSceneBtn" mnemonicParsing="false" onAction="#setBrchEmpScene" prefHeight="32.0" prefWidth="126.0" stylesheets="@style.css" text="Branch / Employees" toggleGroup="$group1" GridPane.rowIndex="6" />
+            <ToggleButton fx:id="tranSceneBtn" mnemonicParsing="false" onAction="#setTranScene" prefHeight="32.0" prefWidth="126.0" stylesheets="@style.css" text="Transactions" toggleGroup="$group1" GridPane.rowIndex="4" />
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="122.0" text="Bank" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="122.0" text="Management" textFill="WHITE" wrapText="true" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ToggleButton fx:id="seviceBtn" mnemonicParsing="false" onAction="#setServiceScene" prefHeight="32.0" prefWidth="126.0" stylesheets="@style.css" text="Services" toggleGroup="$group1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bankmanagement.ServiceSceneController">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="518.0" prefWidth="748.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <GridPane prefHeight="261.0" prefWidth="296.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="178.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="57.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="346.0" style="-fx-background-color: #ff4565;" text="Services" textFill="WHITE" GridPane.columnSpan="2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Service Name :" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Service Amount :" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Description :" GridPane.rowIndex="6" />
+                  <TextField fx:id="sName" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="sAmount" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="sDesc" prefHeight="61.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.rowSpan="2" />
+                  <Button fx:id="addServBtn" mnemonicParsing="false" onAction="#addService" prefHeight="25.0" prefWidth="192.0" text="Add services" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Account No :" GridPane.rowIndex="3" />
+                  <TextField fx:id="sAccNum" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="sWarnMsg" prefHeight="36.0" prefWidth="403.0" text=" " GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="179.0" text="Date :" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="sDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <SplitPane dividerPositions="0.2638190954773869" orientation="VERTICAL">
+               <items>
+                  <GridPane>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="346.0" style="-fx-background-color: #ff4565;" text="Search  Services" textFill="WHITE" GridPane.columnSpan="2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="searchAccNum" promptText="Account Number" GridPane.rowIndex="2" />
+                        <Button fx:id="srchTranServBtn" mnemonicParsing="false" onAction="#searchS" prefHeight="25.0" prefWidth="157.0" text="Search Services" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="sTableView" prefHeight="398.0" prefWidth="296.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#deleteService" text="Delete service" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></TableView>
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
